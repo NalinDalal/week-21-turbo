@@ -1,13 +1,43 @@
 # Turborepo starter
 
+Turborepo is a high-performance monorepo build system specifically designed to overcome the limitations of traditional monorepos. It adds features and optimizations that make managing monorepos easier and faster.
+
 This is an official starter Turborepo.
 
-## Using this example
+## Key Features of Turborepo
 
-Run the following command:
+1. Incremental Builds:
+
+- Only re-builds and re-tests what’s necessary, leveraging a sophisticated dependency graph.
+
+2. Remote Caching:
+
+- Speeds up CI/CD pipelines by sharing build artifacts between local and remote environments.
+
+3. Task Pipelines:
+
+- Defines tasks for builds, tests, or scripts with dependencies to execute them in the right order.
+
+4. Parallel Execution:
+
+- Executes tasks across multiple projects simultaneously, maximizing CPU utilization.
+
+5. Built for JavaScript/TypeScript Ecosystems:
+
+- Supports Yarn, npm, pnpm, and is optimized for tools like Webpack, Vite, and others.
+
+6. Efficient Workflows:
+
+- Automatically deduplicates dependencies and optimizes package management.
+
+## Using turborep
+
+to start run the following command:
 
 ```sh
 npx create-turbo@latest
+? Where would you like to create your Turborepo? week-21-turbo
+? Which package manager do you want to use? yarn
 ```
 
 ## What's inside?
@@ -23,6 +53,11 @@ This Turborepo includes the following packages/apps:
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+notice the file structure -
+`apps`: Directory for application-specific code
+`apps` folder has docs/app-a and web/app-b
+`packages` : Directory for shared libraries or modules
 
 ### Utilities
 
